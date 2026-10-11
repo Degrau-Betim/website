@@ -1,0 +1,63 @@
+/*
+  Classes de texto para usar direto no HTML.
+*/
+
+.f-display,
+.f-title,
+.f-number,
+.f-index,
+.f-step,
+.f-title-sm,
+.f-card,
+.f-subtitle,
+.f-lead,
+.f-body,
+.f-ui,
+.f-caption,
+.f-small,
+.f-overline,
+.f-label,
+.f-tag {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+}
+
+.f-display,
+.f-title,
+.f-number,
+.f-index,
+.f-step,
+.f-title-sm,
+.f-card,
+.f-subtitle,
+.f-overline,
+.f-label,
+.f-tag {
+  font-weight: var(--font-weight-bold);
+}
+
+.f-lead,
+.f-body,
+.f-ui,
+.f-caption,
+.f-small {
+  font-weight: var(--font-weight-regular);
+}
+
+.f-display { font-size: var(--font-size-display); }
+.f-title { font-size: var(--font-size-titulo); }
+.f-number { font-size: var(--font-size-titulo-pagina); }
+.f-index { font-size: var(--font-size-indice); }
+.f-step { font-size: var(--font-size-passo); }
+.f-title-sm { font-size: var(--font-size-titulo-compacto); }
+.f-card { font-size: var(--font-size-card); }
+.f-subtitle { font-size: var(--font-size-subtitulo); }
+.f-lead { font-size: var(--font-size-lead); }
+.f-body { font-size: var(--font-size-corpo); }
+.f-ui { font-size: var(--font-size-ui); }
+.f-caption { font-size: var(--font-size-legenda); }
+.f-small { font-size: var(--font-size-miudo); }
+.f-overline { font-size: var(--font-size-overline); }
+.f-label { font-size: var(--font-size-etiqueta); }
+.f-tag { font-size: var(--font-size-tag); }
