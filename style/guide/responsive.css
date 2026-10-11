@@ -1,0 +1,42 @@
+/*
+  Estas regras apenas reorganizam a página de documentação do arquivo responsive.css.
+*/
+
+@media (max-width: 1200px) {
+  .page {
+    padding-inline: var(--space-24);
+  }
+
+  .swatches {
+    grid-template-columns: repeat(auto-fill, minmax(var(--swatch-width), 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding-block: var(--space-24);
+  }
+
+  .type-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .button-row,
+  .button-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button-row .control-sample,
+  .button-stage .control-sample {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+  }
+
+  .space-item {
+    grid-template-columns: 4rem minmax(0, 1fr);
+  }
+}

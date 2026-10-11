@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEGRAU · Guia de estilos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="page-header">
+      <h1 class="f-number">DEGRAU · Guia de estilos</h1>
+      <p class="f-ui">Tokens lidos da Page 1 do Figma. Montserrat, raio de 4 px e quadro desktop de 1440 px. Clique em uma cor para copiar o HEX e em um texto, botão ou campo para copiar a classe.</p>
+      <p class="visually-hidden" data-copy-status aria-live="polite"></p>
+    </header>
+
+    <main>
+      <section class="section" aria-labelledby="cores-titulo">
+        <p class="f-overline overline">CORES DA MARCA</p>
+        <div class="swatches">
+          <button class="swatch" type="button" data-copy="#0C2230">
+            <span class="swatch-color" style="--swatch: var(--color-azul-profundo)"></span>
+            <span class="swatch-name">Azul profundo</span>
+            <span class="swatch-hex">#0C2230</span>
+            <span class="swatch-meta">RGB 12, 34, 48</span>
+            <span class="swatch-role">Principal: fundos, títulos, menu e rodapé</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#252525">
+            <span class="swatch-color" style="--swatch: var(--color-cinza-escuro)"></span>
+            <span class="swatch-name">Cinza escuro</span>
+            <span class="swatch-hex">#252525</span>
+            <span class="swatch-meta">RGB 37, 37, 37</span>
+            <span class="swatch-role">Texto e logo monocromático</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#C0C0C0">
+            <span class="swatch-color" style="--swatch: var(--color-cinza-claro)"></span>
+            <span class="swatch-name">Cinza claro</span>
+            <span class="swatch-hex">#C0C0C0</span>
+            <span class="swatch-meta">RGB 192, 192, 192</span>
+            <span class="swatch-role">Textos sobre fundo azul e bordas</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#C95103">
+            <span class="swatch-color" style="--swatch: var(--color-terracota)"></span>
+            <span class="swatch-name">Terracota</span>
+            <span class="swatch-hex">#C95103</span>
+            <span class="swatch-meta">RGB 201, 81, 3</span>
+            <span class="swatch-role">Botões e destaques (ação)</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#F5F6F7">
+            <span class="swatch-color is-light" style="--swatch: var(--color-off-white)"></span>
+            <span class="swatch-name">Off-white</span>
+            <span class="swatch-hex">#F5F6F7</span>
+            <span class="swatch-meta">RGB 245, 246, 247</span>
+            <span class="swatch-role">Fundo de seções claras</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#FFFFFF">
+            <span class="swatch-color is-light" style="--swatch: var(--color-branco)"></span>
+            <span class="swatch-name">Branco</span>
+            <span class="swatch-hex">#FFFFFF</span>
+            <span class="swatch-meta">RGB 255, 255, 255</span>
+            <span class="swatch-role">Fundo, cards e textos sobre azul</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+        </div>
+
+        <p class="f-overline overline">ESTADOS E APOIO</p>
+        <div class="swatches">
+          <button class="swatch" type="button" data-copy="#A84300">
+            <span class="swatch-color" style="--swatch: var(--color-terracota-hover)"></span>
+            <span class="swatch-name">Terracota hover</span>
+            <span class="swatch-hex">#A84300</span>
+            <span class="swatch-meta">RGB 168, 67, 0</span>
+            <span class="swatch-role">Botão primário ao passar o mouse</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#0A1B27">
+            <span class="swatch-color" style="--swatch: var(--color-azul-rodape)"></span>
+            <span class="swatch-name">Azul escuro rodapé</span>
+            <span class="swatch-hex">#0A1B27</span>
+            <span class="swatch-meta">RGB 10, 27, 39</span>
+            <span class="swatch-role">Faixa de números do banner</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#12303F">
+            <span class="swatch-color" style="--swatch: var(--color-azul-card)"></span>
+            <span class="swatch-name">Azul card</span>
+            <span class="swatch-hex">#12303F</span>
+            <span class="swatch-meta">RGB 18, 48, 63</span>
+            <span class="swatch-role">Cards sobre fundo azul</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#FBE9DD">
+            <span class="swatch-color is-light" style="--swatch: var(--color-terracota-claro)"></span>
+            <span class="swatch-name">Terracota claro</span>
+            <span class="swatch-hex">#FBE9DD</span>
+            <span class="swatch-meta">RGB 251, 233, 221</span>
+            <span class="swatch-role">Fundo das etiquetas (tags)</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#E5E7EA">
+            <span class="swatch-color is-light" style="--swatch: var(--color-borda)"></span>
+            <span class="swatch-name">Borda</span>
+            <span class="swatch-hex">#E5E7EA</span>
+            <span class="swatch-meta">RGB 229, 231, 234</span>
+            <span class="swatch-role">Linhas divisórias dos cards</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#6B6B6B">
+            <span class="swatch-color" style="--swatch: var(--color-texto-secundario)"></span>
+            <span class="swatch-name">Texto secundário</span>
+            <span class="swatch-hex">#6B6B6B</span>
+            <span class="swatch-meta">RGB 107, 107, 107</span>
+            <span class="swatch-role">Datas e textos de apoio</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+        </div>
+
+        <p class="f-overline overline">CORES DOS ODS</p>
+        <div class="swatches">
+          <button class="swatch" type="button" data-copy="#E5243B">
+            <span class="swatch-color" style="--swatch: var(--color-ods-pobreza)"></span>
+            <span class="swatch-name">ODS 1 Pobreza</span>
+            <span class="swatch-hex">#E5243B</span>
+            <span class="swatch-meta">RGB 229, 36, 59</span>
+            <span class="swatch-role">Quadrado ODS 1</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#4C9F38">
+            <span class="swatch-color" style="--swatch: var(--color-ods-saude)"></span>
+            <span class="swatch-name">ODS 2 Saúde</span>
+            <span class="swatch-hex">#4C9F38</span>
+            <span class="swatch-meta">RGB 76, 159, 56</span>
+            <span class="swatch-role">Quadrado ODS 2</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#C5192D">
+            <span class="swatch-color" style="--swatch: var(--color-ods-educacao)"></span>
+            <span class="swatch-name">ODS 3 Educação</span>
+            <span class="swatch-hex">#C5192D</span>
+            <span class="swatch-meta">RGB 197, 25, 45</span>
+            <span class="swatch-role">Quadrado ODS 3</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#DD1367">
+            <span class="swatch-color" style="--swatch: var(--color-ods-desigualdades)"></span>
+            <span class="swatch-name">ODS 4 Desigualdades</span>
+            <span class="swatch-hex">#DD1367</span>
+            <span class="swatch-meta">RGB 221, 19, 103</span>
+            <span class="swatch-role">Quadrado ODS 4</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+          <button class="swatch" type="button" data-copy="#FD9D24">
+            <span class="swatch-color" style="--swatch: var(--color-ods-cidades)"></span>
+            <span class="swatch-name">ODS 5 Cidades</span>
+            <span class="swatch-hex">#FD9D24</span>
+            <span class="swatch-meta">RGB 253, 157, 36</span>
+            <span class="swatch-role">Quadrado ODS 5</span>
+            <span class="copy-status" data-copy-feedback></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="tipo-titulo">
+        <p class="f-overline overline">TIPOGRAFIA · MONTSERRAT</p>
+        <h2 id="tipo-titulo" class="f-title-sm">Tamanhos aplicados no layout</h2>
+        <p class="f-ui section-intro">Clique na linha para copiar a classe e usar no HTML, como <span class="type-spec">f-title</span>.</p>
+        <div class="type-list">
+          <button class="type-row" type="button" data-copy="f-display">
+            <span class="type-role">Display</span>
+            <span class="f-display type-sample">Construindo degraus</span>
+            <span class="type-spec">f-display <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-title">
+            <span class="type-role">Título</span>
+            <span class="f-title type-sample">Construindo degraus</span>
+            <span class="type-spec">f-title <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-number">
+            <span class="type-role">Número</span>
+            <span class="f-number type-sample">2018</span>
+            <span class="type-spec">f-number <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-index">
+            <span class="type-role">Índice</span>
+            <span class="f-index type-sample">01</span>
+            <span class="type-spec">f-index <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-step">
+            <span class="type-role">Passo</span>
+            <span class="f-step type-sample">1</span>
+            <span class="type-spec">f-step <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-title-sm">
+            <span class="type-role">Título compacto</span>
+            <span class="f-title-sm type-sample">DEGRAU</span>
+            <span class="type-spec">f-title-sm <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-card">
+            <span class="type-role">Card</span>
+            <span class="f-card type-sample">Construindo degraus</span>
+            <span class="type-spec">f-card <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-subtitle">
+            <span class="type-role">Subtítulo</span>
+            <span class="f-subtitle type-sample">Construindo degraus</span>
+            <span class="type-spec">f-subtitle <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-lead">
+            <span class="type-role">Lead</span>
+            <span class="f-lead type-sample">Construindo degraus</span>
+            <span class="type-spec">f-lead <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-body">
+            <span class="type-role">Corpo</span>
+            <span class="f-body type-sample">Construindo degraus</span>
+            <span class="type-spec">f-body <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-ui">
+            <span class="type-role">Interface</span>
+            <span class="f-ui type-sample">Construindo degraus</span>
+            <span class="type-spec">f-ui <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-caption">
+            <span class="type-role">Legenda</span>
+            <span class="f-caption type-sample">Construindo degraus</span>
+            <span class="type-spec">f-caption <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-small">
+            <span class="type-role">Miúdo</span>
+            <span class="f-small type-sample">Construindo degraus</span>
+            <span class="type-spec">f-small <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-overline">
+            <span class="type-role">Overline</span>
+            <span class="f-overline type-sample">SOBRE O DEGRAU</span>
+            <span class="type-spec">f-overline <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-label">
+            <span class="type-role">Etiqueta ODS</span>
+            <span class="f-label type-sample">ERRADICAÇÃO DA POBREZA</span>
+            <span class="type-spec">f-label <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+          <button class="type-row" type="button" data-copy="f-tag">
+            <span class="type-role">Tag</span>
+            <span class="f-tag type-sample">SOCIAL</span>
+            <span class="type-spec">f-tag <span class="copy-status" data-copy-feedback></span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="botoes-titulo">
+        <p class="f-overline overline">BOTÕES</p>
+        <h2 id="botoes-titulo" class="f-title-sm">230 × 56 px</h2>
+        <p class="f-ui section-intro">Clique no botão ou no campo para copiar a classe.</p>
+        <div class="button-row">
+          <div class="control-sample" data-copy="btn btn-primary">
+            <button class="btn btn-primary" type="button">Primário</button>
+            <p class="type-spec">btn btn-primary <span class="copy-status" data-copy-feedback></span></p>
+          </div>
+        </div>
+        <div class="button-stage">
+          <div class="control-sample" data-copy="btn btn-secondary">
+            <button class="btn btn-secondary" type="button">Secundário</button>
+            <p class="type-spec">btn btn-secondary <span class="copy-status" data-copy-feedback></span></p>
+          </div>
+          <div class="control-sample" data-copy="btn btn-primary">
+            <button class="btn btn-primary" type="button">Primário sobre azul</button>
+            <p class="type-spec">btn btn-primary <span class="copy-status" data-copy-feedback></span></p>
+          </div>
+        </div>
+        <div class="control-row">
+          <div class="control-sample" data-copy="field">
+            <input class="field" type="text" readonly aria-label="Campo, copiar classe field" placeholder="Campo">
+            <p class="type-spec">field <span class="copy-status" data-copy-feedback></span></p>
+          </div>
+        </div>
+        <p class="f-small caption">Todos os botões medem 230 × 56 px, com raio de 4 px e rótulo Bold 15 px. Hover do primário: #A84300. Secundário: contorno branco de 2 px. Campo: altura 48 px, borda 1,5 px #C0C0C0.</p>
+      </section>
+
+      <section class="section" aria-labelledby="espaco-titulo">
+        <p class="f-overline overline">ESPAÇAMENTO · GRID</p>
+        <h2 id="espaco-titulo" class="f-title-sm">Medidas do quadro de 1440 px</h2>
+        <div class="space-list">
+          <div class="space-item">
+            <p class="space-label">4</p><span class="space-bar bar-4"></span>
+          </div>
+          <div class="space-item">
+            <p class="space-label">6</p><span class="space-bar bar-6"></span>
+          </div>
+          <div class="space-item">
+            <p class="space-label">16</p><span class="space-bar bar-16"></span>
+          </div>
+          <div class="space-item">
+            <p class="space-label">20</p><span class="space-bar bar-20"></span>
+          </div>
+          <div class="space-item">
+            <p class="space-label">24</p><span class="space-bar bar-24"></span>
+          </div>
+          <div class="space-item">
+            <p class="space-label">30</p><span class="space-bar bar-30"></span>
+          </div>
+          <div class="space-item">
+            <p class="space-label">60</p><span class="space-bar bar-60"></span>
+          </div>
+          <div class="space-item">
+            <p class="space-label">80</p><span class="space-bar bar-80"></span>
+          </div>
+          <div class="space-item">
+            <p class="space-label">120</p><span class="space-bar bar-120"></span>
+          </div>
+        </div>
+        <ul class="facts">
+          <li>4 px: raio, barra de destaque e filete do banner.</li>
+          <li>6 px: barra vertical sobre a foto da seção Sobre.</li>
+          <li>16 px: folga vertical do botão dentro do menu de 80 px.</li>
+          <li>20 px: recuo do texto nos cards de portfólio.</li>
+          <li>24 px: vão entre as amostras e recuo horizontal dos cards de objetivo.</li>
+          <li>30 px: vão entre os cards de portfólio de 380 px.</li>
+          <li>60 px: vão entre os três cards de objetivo de 360 px.</li>
+          <li>80 px: altura do menu e módulo da grade desenhada no hero.</li>
+          <li>120 px: margem lateral, faixa de números e rodapé.</li>
+        </ul>
+        <div class="grid-preview" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <ul class="facts">
+          <li>Desktop desenhado: 1440 px, margem 120 px, conteúdo 1200 px.</li>
+          <li>A grade do hero é uma malha de 80 px (18 intervalos na largura da página; 15 módulos cabem no conteúdo).</li>
+          <li>Imagens medidas: 600 × 360 px na seção Sobre e 380 × 200 px nos cards de portfólio.</li>
+          <li>Cards e botões usam raio de 4 px. Não há sombra aplicada em nenhum nó.</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="ausente-titulo">
+        <p class="f-overline overline">FORA DO ARQUIVO</p>
+        <h2 id="ausente-titulo" class="f-title-sm">Não virou token</h2>
+        <ul class="missing">
+          <li>Variáveis, estilos de cor, estilos de texto, efeitos e grades nomeadas: a consulta retornou vazio.</li>
+          <li>SemiBold, escala 56/64, 28/36 e tracking de 0,25 em.</li>
+          <li>Botão de 40 px, foco com contorno de 3 px e sombra 0 4 16.</li>
+          <li>Breakpoints, 12 colunas, gutter de 24 px no conteúdo e margens de tablet ou mobile. Só existe o quadro desktop.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
