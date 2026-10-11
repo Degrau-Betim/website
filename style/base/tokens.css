@@ -1,0 +1,118 @@
+/*
+  DEGRau — tokens visuais
+  Fonte: arquivo Figma "DEGRAU · Escritório Modelo e Empregabilidade", Page 1.
+  Não existem variáveis, estilos de cor, estilos de texto, estilos de efeito
+  nem estilos de grid no arquivo. Os valores abaixo foram lidos dos nós.
+
+  Paleta nomeada: frame "degrau-paleta-de-cores 1" (7:1422).
+  Tipografia, raios, alturas e vãos: nós do layout "DEGRAU_ Escritório Modelo
+  e Empregabilidade 1" (3:794). A altura de linha está em AUTO e o
+  espaçamento entre letras está em 0 em todo o texto.
+*/
+
+:root {
+  /* Cores primitivas — nomes e HEX escritos no frame da paleta */
+  --color-azul-profundo: #0c2230;
+  --color-cinza-escuro: #252525;
+  --color-cinza-claro: #c0c0c0;
+  --color-terracota: #c95103;
+  --color-off-white: #f5f6f7;
+  --color-branco: #ffffff;
+  --color-terracota-hover: #a84300;
+  --color-azul-rodape: #0a1b27;
+  --color-azul-card: #12303f;
+  --color-terracota-claro: #fbe9dd;
+  --color-borda: #e5e7ea;
+  --color-texto-secundario: #6b6b6b;
+  --color-ods-pobreza: #e5243b;
+  --color-ods-saude: #4c9f38;
+  --color-ods-educacao: #c5192d;
+  --color-ods-desigualdades: #dd1367;
+  --color-ods-cidades: #fd9d24;
+
+  /* Contorno só dos amostras claros da paleta (traço 1.5 px, não é cor de produto) */
+  --color-contorno-amostra: #d9dce0;
+
+  /* Cores semânticas — papéis descritos na paleta e confirmados no layout */
+  --color-fundo: var(--color-branco);
+  --color-fundo-suave: var(--color-off-white);
+  --color-fundo-invertido: var(--color-azul-profundo);
+  --color-fundo-invertido-profundo: var(--color-azul-rodape);
+  --color-fundo-card-invertido: var(--color-azul-card);
+  --color-fundo-etiqueta: var(--color-terracota-claro);
+  --color-texto: var(--color-cinza-escuro);
+  --color-texto-forte: var(--color-azul-profundo);
+  --color-texto-apoio: var(--color-texto-secundario);
+  --color-texto-invertido: var(--color-branco);
+  --color-texto-sobre-azul: var(--color-cinza-claro);
+  --color-acao: var(--color-terracota);
+  --color-acao-hover: var(--color-terracota-hover);
+  --color-linha: var(--color-borda);
+  --color-linha-campo: var(--color-cinza-claro);
+
+  /* Tipografia */
+  --font-family: "Montserrat", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --line-height: normal;
+  --letter-spacing: 0;
+
+  /* Tamanhos medidos. Não há SemiBold nem escala 56/28 no arquivo. */
+  --font-size-display: 52px;
+  --font-size-titulo: 40px;
+  --font-size-titulo-pagina: 36px;
+  --font-size-indice: 32px;
+  --font-size-passo: 24px;
+  --font-size-titulo-compacto: 22px;
+  --font-size-card: 20px;
+  --font-size-subtitulo: 19px;
+  --font-size-lead: 18px;
+  --font-size-corpo: 16px;
+  --font-size-ui: 15px;
+  --font-size-legenda: 14px;
+  --font-size-miudo: 13px;
+  --font-size-overline: 12px;
+  --font-size-etiqueta: 11px;
+  --font-size-tag: 10px;
+
+  /* Vãos medidos no layout e na paleta */
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-30: 30px;
+  --space-60: 60px;
+  --space-80: 80px;
+  --space-120: 120px;
+
+  /* Página desktop desenhada. Não há frames de tablet nem de mobile. */
+  --layout-page: 1440px;
+  --layout-margin: 120px;
+  --layout-content: 1200px;
+  --layout-header: 80px;
+  --layout-grid: 80px;
+  --layout-footer: 120px;
+
+  /* Amostras da paleta: 6 × 180 px + 5 vãos de 24 px = 1200 px */
+  --swatch-width: 180px;
+  --swatch-height: 140px;
+
+  /* Raio único, lido da geometria dos vetores (botões, cards e amostras) */
+  --radius: 4px;
+
+  --border-width: 1px;
+  --border-width-campo: 1.5px;
+  --border-width-contorno: 2px;
+
+  --size-barra: 4px;
+  --size-barra-foto: 6px;
+
+  /* Botão do hero: 230 × 56 px. O campo continua com 48 px. */
+  --button-width: 230px;
+  --button-height: 56px;
+  --control-height: 48px;
+  --button-padding-x: var(--space-24);
+  --button-font-size: var(--font-size-ui);
+  --button-font-weight: var(--font-weight-bold);
+}
