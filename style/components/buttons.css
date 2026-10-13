@@ -28,6 +28,10 @@
   color: var(--color-texto-invertido);
 }
 
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .btn:focus-visible,
 .field:focus-visible {
   outline: var(--border-width-contorno) solid var(--color-acao);
