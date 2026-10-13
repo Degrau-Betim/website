@@ -1,13 +1,6 @@
 /*
-  DEGRau — tokens visuais
+  DEGRAU — tokens visuais
   Fonte: arquivo Figma "DEGRAU · Escritório Modelo e Empregabilidade", Page 1.
-  Não existem variáveis, estilos de cor, estilos de texto, estilos de efeito
-  nem estilos de grid no arquivo. Os valores abaixo foram lidos dos nós.
-
-  Paleta nomeada: frame "degrau-paleta-de-cores 1" (7:1422).
-  Tipografia, raios, alturas e vãos: nós do layout "DEGRAU_ Escritório Modelo
-  e Empregabilidade 1" (3:794). A altura de linha está em AUTO e o
-  espaçamento entre letras está em 0 em todo o texto.
 */
 
 :root {
