@@ -1,0 +1,271 @@
+/*
+  Ações do semestre.
+  Medidas do frame 1:181: cartão 360 × 400, capa 360 × 190,
+  vão de 30 px. Cores e tipo vêm dos tokens.
+*/
+
+.acoes {
+  padding: calc(var(--space-80) + var(--space-16)) var(--layout-margin) calc(var(--space-60) + var(--space-6) + var(--space-4));
+  color: var(--color-texto-invertido);
+  background: var(--color-fundo-invertido);
+}
+
+.acoes-inner {
+  width: min(100%, var(--layout-content));
+  margin-inline: auto;
+}
+
+.acoes-kicker {
+  color: var(--color-acao);
+  font-size: 0.75rem;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.acoes-title {
+  max-width: 16em;
+  margin-top: var(--space-6);
+  color: var(--color-texto-invertido);
+  font-size: clamp(1.75rem, 0.9rem + 2.1vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.acoes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-30);
+  margin-top: var(--space-60);
+}
+
+.acoes-grid > li {
+  display: flex;
+  min-width: 0;
+}
+
+.acoes-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--color-fundo-card-invertido);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) {
+  .acoes-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--color-azul-profundo) 55%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acoes-card,
+  .acoes-cover-note {
+    transition: none;
+  }
+
+  .acoes-card:hover {
+    transform: none;
+  }
+}
+
+.acoes-cover {
+  position: relative;
+  aspect-ratio: 360 / 190;
+  overflow: hidden;
+  color: var(--color-texto-invertido);
+  background-color: var(--color-fundo-invertido);
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-branco) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-branco) 10%, transparent) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.acoes-cover::before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--border-width-contorno);
+  background: var(--color-acao);
+}
+
+.acoes-cover--graphite {
+  background-color: var(--color-cinza-escuro);
+}
+
+.acoes-cover-kicker,
+.acoes-cover-title {
+  position: relative;
+  z-index: 1;
+}
+
+.acoes-cover-kicker {
+  max-width: 70%;
+  margin: var(--space-16) var(--space-16) 0 var(--space-16);
+  color: var(--color-texto-sobre-azul);
+  font-family: var(--font-family);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.acoes-cover-title {
+  max-width: 68%;
+  margin: var(--space-6) var(--space-16) 0 var(--space-16);
+  font-family: var(--font-family);
+  font-size: clamp(0.875rem, 0.7rem + 0.6vw, 1.125rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.25;
+}
+
+.acoes-cover-note {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding: var(--space-16);
+  color: var(--color-texto-invertido);
+  background: color-mix(in srgb, var(--color-azul-profundo) 82%, transparent);
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
+  line-height: calc(20 / 14);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+  .acoes-card:hover .acoes-cover-note {
+    opacity: 1;
+  }
+}
+
+.acoes-cover-steps {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  width: 42%;
+  height: 62%;
+}
+
+.acoes-cover-steps span {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.acoes-cover-steps span:nth-child(1) {
+  height: 42%;
+  background: color-mix(in srgb, var(--color-cinza-claro) 22%, var(--color-azul-card));
+}
+
+.acoes-cover-steps span:nth-child(2) {
+  height: 58%;
+  background: color-mix(in srgb, var(--color-cinza-claro) 38%, var(--color-azul-profundo));
+}
+
+.acoes-cover-steps span:nth-child(3) {
+  height: 76%;
+  background: color-mix(in srgb, var(--color-cinza-claro) 52%, var(--color-azul-card));
+}
+
+.acoes-cover-steps span:nth-child(4) {
+  height: 100%;
+  background: color-mix(in srgb, var(--color-cinza-claro) 68%, var(--color-azul-profundo));
+}
+
+.acoes-cover--graphite .acoes-cover-steps span:nth-child(1) {
+  background: color-mix(in srgb, var(--color-cinza-claro) 18%, var(--color-cinza-escuro));
+}
+
+.acoes-cover--graphite .acoes-cover-steps span:nth-child(2) {
+  background: color-mix(in srgb, var(--color-cinza-claro) 32%, var(--color-cinza-escuro));
+}
+
+.acoes-cover--graphite .acoes-cover-steps span:nth-child(3) {
+  background: color-mix(in srgb, var(--color-cinza-claro) 48%, var(--color-cinza-escuro));
+}
+
+.acoes-cover--graphite .acoes-cover-steps span:nth-child(4) {
+  background: color-mix(in srgb, var(--color-cinza-claro) 64%, var(--color-cinza-escuro));
+}
+
+.acoes-cover--accent .acoes-cover-steps span:nth-child(4) {
+  background: var(--color-acao);
+}
+
+.acoes-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--space-20) var(--space-24) calc(var(--space-30) + var(--space-24));
+}
+
+.acoes-status {
+  color: var(--color-acao);
+  font-family: var(--font-family);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.acoes-name {
+  min-height: calc(1.2em * 2);
+  margin-top: calc(var(--space-16) - var(--space-4));
+  color: var(--color-texto-invertido);
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+.acoes-text {
+  margin-top: var(--space-24);
+  color: var(--color-texto-sobre-azul);
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
+  line-height: calc(20 / 14);
+}
+
+@media (max-width: 1200px) {
+  .acoes {
+    padding-inline: var(--space-24);
+  }
+}
+
+@media (max-width: 965px) {
+  .acoes {
+    padding-block: var(--space-60);
+  }
+
+  .acoes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-24);
+    margin-top: var(--space-30);
+  }
+}
+
+@media (max-width: 768px) {
+  .acoes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .acoes {
+    padding-inline: var(--space-16);
+  }
+}
