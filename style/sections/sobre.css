@@ -5,8 +5,16 @@
   Os fundos dos ODS são a exceção já nomeada na paleta.
 */
 
+.sobre-ods-icon {
+  width: 100%;
+  max-width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
 .sobre {
-  padding: calc(var(--space-80) + var(--space-24) + var(--space-4)) var(--layout-margin) var(--space-120);
+  padding: calc(var(--space-80) + var(--space-24) + var(--space-4))
+    var(--layout-margin) var(--space-120);
   color: var(--color-texto);
   background: var(--color-fundo);
 }
@@ -58,8 +66,16 @@
   color: var(--color-texto-invertido);
   background-color: var(--color-fundo-invertido);
   background-image:
-    linear-gradient(to right, color-mix(in srgb, var(--color-branco) 12%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, var(--color-branco) 12%, transparent) 1px, transparent 1px);
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--color-branco) 12%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-branco) 12%, transparent) 1px,
+      transparent 1px
+    );
   background-size: 32px 32px;
 }
 
@@ -77,7 +93,8 @@
   position: relative;
   z-index: 1;
   max-width: 60%;
-  padding: var(--space-24) var(--space-24) 0 calc(var(--size-barra-foto) + var(--space-20));
+  padding: var(--space-24) var(--space-24) 0
+    calc(var(--size-barra-foto) + var(--space-20));
 }
 
 .sobre-board-kicker {
@@ -116,22 +133,38 @@
 
 .sobre-board-steps span:nth-child(1) {
   height: 46%;
-  background: color-mix(in srgb, var(--color-cinza-claro) 24%, var(--color-azul-card));
+  background: color-mix(
+    in srgb,
+    var(--color-cinza-claro) 24%,
+    var(--color-azul-card)
+  );
 }
 
 .sobre-board-steps span:nth-child(2) {
   height: 64%;
-  background: color-mix(in srgb, var(--color-cinza-claro) 40%, var(--color-azul-profundo));
+  background: color-mix(
+    in srgb,
+    var(--color-cinza-claro) 40%,
+    var(--color-azul-profundo)
+  );
 }
 
 .sobre-board-steps span:nth-child(3) {
   height: 80%;
-  background: color-mix(in srgb, var(--color-cinza-claro) 55%, var(--color-azul-card));
+  background: color-mix(
+    in srgb,
+    var(--color-cinza-claro) 55%,
+    var(--color-azul-card)
+  );
 }
 
 .sobre-board-steps span:nth-child(4) {
   height: 100%;
-  background: color-mix(in srgb, var(--color-cinza-claro) 72%, var(--color-azul-profundo));
+  background: color-mix(
+    in srgb,
+    var(--color-cinza-claro) 72%,
+    var(--color-azul-profundo)
+  );
 }
 
 .sobre-ods {
