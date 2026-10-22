@@ -50,6 +50,25 @@
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--color-fundo-card-invertido);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) {
+  .acoes-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--color-azul-profundo) 55%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acoes-card,
+  .acoes-cover-note {
+    transition: none;
+  }
+
+  .acoes-card:hover {
+    transform: none;
+  }
 }
 
 .acoes-cover {
@@ -104,6 +123,30 @@
   font-size: clamp(0.875rem, 0.7rem + 0.6vw, 1.125rem);
   font-weight: var(--font-weight-bold);
   line-height: 1.25;
+}
+
+.acoes-cover-note {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding: var(--space-16);
+  color: var(--color-texto-invertido);
+  background: color-mix(in srgb, var(--color-azul-profundo) 82%, transparent);
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
+  line-height: calc(20 / 14);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+  .acoes-card:hover .acoes-cover-note {
+    opacity: 1;
+  }
 }
 
 .acoes-cover-steps {
