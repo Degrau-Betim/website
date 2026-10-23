@@ -1,0 +1,172 @@
+/*
+  Nosso propósito e objetivos específicos.
+  Medidas do frame 3:949: conteúdo 1200 px, filete 4 × 150,
+  cartões 360 × 200 com vão de 60 px (colunas) e 30 px (linhas).
+  Cores e tipo vêm dos tokens.
+*/
+
+.proposito {
+  padding: calc(var(--space-80) + var(--space-16)) var(--layout-margin)
+    calc(var(--space-80) + var(--space-20));
+  color: var(--color-texto);
+  background: var(--color-fundo-suave);
+}
+
+.proposito-inner {
+  width: min(100%, var(--layout-content));
+  margin-inline: auto;
+}
+
+.proposito-intro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--space-24);
+  align-items: start;
+}
+
+.proposito-kicker {
+  color: var(--color-acao);
+  font-size: 0.75rem;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.proposito-title {
+  max-width: 12.5em;
+  margin-top: var(--space-6);
+  color: var(--color-texto-forte);
+  font-size: clamp(1.75rem, 0.9rem + 2.1vw, 2.5rem);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.proposito-text {
+  max-width: calc(31.25rem + var(--size-barra) + var(--space-24));
+  margin-top: var(--space-6);
+  padding-left: var(--space-24);
+  border-left: var(--size-barra) solid var(--color-acao);
+  color: var(--color-texto-forte);
+  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+  line-height: calc(26 / 16);
+}
+
+.proposito-objetivos {
+  margin-top: calc(var(--space-60) + var(--space-6));
+}
+
+.proposito-objetivos-heading {
+  color: var(--color-texto-forte);
+  font-size: 0.75rem;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.proposito-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: var(--space-30) var(--space-60);
+  margin-top: calc(var(--space-24) + var(--space-4));
+  list-style: none;
+}
+
+.proposito-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  min-width: 0;
+  min-height: 200px;
+  padding: var(--space-24) var(--space-24) var(--space-30);
+  border-top: var(--size-barra) solid var(--color-acao);
+  border-radius: var(--radius);
+  background: var(--color-branco);
+}
+
+.proposito-number {
+  color: var(--color-acao);
+  font-size: clamp(1.75rem, 1.5rem + 0.6vw, 2rem);
+  line-height: 1.2;
+}
+
+.proposito-card-text {
+  color: var(--color-texto);
+  font-size: 0.9375rem;
+  line-height: calc(23 / 15);
+}
+
+@media (max-width: 1200px) {
+  .proposito {
+    padding-inline: var(--space-24);
+  }
+
+  .proposito-grid {
+    column-gap: var(--space-30);
+  }
+}
+
+@media (max-width: 965px) {
+  .proposito {
+    padding-block: var(--space-60);
+  }
+
+  .proposito-intro {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    column-gap: var(--space-30);
+  }
+
+  .proposito-objetivos {
+    margin-top: var(--space-60);
+  }
+
+  .proposito-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-24);
+    margin-top: var(--space-24);
+  }
+
+  .proposito-card {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .proposito {
+    padding-block: calc(var(--space-30) + var(--space-20));
+  }
+
+  .proposito-intro {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-24);
+  }
+
+  .proposito-text {
+    margin-top: 0;
+    padding-left: var(--space-20);
+  }
+
+  .proposito-objetivos {
+    margin-top: calc(var(--space-30) + var(--space-20));
+  }
+}
+
+@media (max-width: 600px) {
+  .proposito-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: var(--space-16);
+  }
+
+  .proposito-card {
+    min-height: 0;
+    padding: var(--space-20) var(--space-20) var(--space-24);
+    gap: calc(var(--space-16) - var(--space-4));
+  }
+}
+
+@media (max-width: 360px) {
+  .proposito {
+    padding-inline: var(--space-16);
+  }
+}
