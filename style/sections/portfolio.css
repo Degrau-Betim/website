@@ -1,11 +1,11 @@
 /*
   Portfólio.
-  Medidas do frame 1:108: cartão 360 px, capa 360 × 195,
-  vão de 30 px entre cartões. Cores e tipo vêm dos tokens.
+  Frame secao-portfolio: destaque 587 px e cartões de 285 e 380 px.
+  As fotos vêm do render oficial do frame.
 */
 
 .portfolio {
-  padding: calc(var(--space-80) + var(--space-16)) var(--layout-margin) calc(var(--space-120) + var(--space-16));
+  padding: calc(var(--space-80) + var(--space-16)) var(--layout-margin) calc(var(--space-80) + var(--space-16));
   color: var(--color-texto);
   background: var(--color-fundo-suave);
 }
@@ -31,14 +31,22 @@
   line-height: 1.2;
 }
 
-.portfolio-grid {
+.portfolio-top {
+  display: grid;
+  grid-template-columns: minmax(0, 587fr) minmax(0, 285fr) minmax(0, 285fr);
+  gap: var(--space-20);
+  margin-top: calc(var(--space-60) + var(--space-6));
+}
+
+.portfolio-rest {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-30);
-  margin-top: calc(var(--space-80) + var(--space-30) + var(--space-6));
+  margin-top: var(--space-30);
 }
 
-.portfolio-grid > li {
+.portfolio-top > li,
+.portfolio-rest > li {
   display: flex;
   min-width: 0;
 }
@@ -53,6 +61,10 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.portfolio-card--feature {
+  border: var(--border-width-contorno) solid var(--color-acao);
+}
+
 @media (hover: hover) {
   .portfolio-card:hover {
     transform: translateY(-4px);
@@ -61,8 +73,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .portfolio-card,
-  .portfolio-cover-note {
+  .portfolio-card {
     transition: none;
   }
 
@@ -73,135 +84,23 @@
 
 .portfolio-cover {
   position: relative;
-  aspect-ratio: 360 / 195;
+  aspect-ratio: 380 / 190;
   overflow: hidden;
-  color: var(--color-texto-invertido);
-  background-color: var(--color-fundo-invertido);
-  background-image:
-    linear-gradient(to right, color-mix(in srgb, var(--color-branco) 10%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, var(--color-branco) 10%, transparent) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background: var(--color-fundo-suave);
 }
 
-.portfolio-cover::before {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: var(--border-width-contorno);
-  background: var(--color-acao);
+.portfolio-card--side .portfolio-cover {
+  aspect-ratio: 285 / 190;
 }
 
-.portfolio-cover--graphite {
-  background-color: var(--color-cinza-escuro);
+.portfolio-card--feature .portfolio-cover {
+  aspect-ratio: 587 / 230;
 }
 
-.portfolio-cover-kicker,
-.portfolio-cover-title {
-  position: relative;
-  z-index: 1;
-}
-
-.portfolio-cover-kicker {
-  max-width: 62%;
-  margin: var(--space-16) var(--space-16) 0 var(--space-16);
-  color: var(--color-texto-sobre-azul);
-  font-family: var(--font-family);
-  font-size: 0.625rem;
-  font-weight: var(--font-weight-bold);
-  line-height: 1.3;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.portfolio-cover-title {
-  max-width: 68%;
-  margin: var(--space-6) var(--space-16) 0 var(--space-16);
-  font-family: var(--font-family);
-  font-size: clamp(0.875rem, 0.7rem + 0.6vw, 1.125rem);
-  font-weight: var(--font-weight-bold);
-  line-height: 1.25;
-}
-
-.portfolio-cover-note {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  margin: 0;
-  padding: var(--space-16);
-  color: var(--color-texto-invertido);
-  background: color-mix(in srgb, var(--color-azul-profundo) 82%, transparent);
-  font-family: var(--font-family);
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-regular);
-  line-height: calc(20 / 14);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-@media (hover: hover) {
-  .portfolio-card:hover .portfolio-cover-note {
-    opacity: 1;
-  }
-}
-
-.portfolio-cover-steps {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: flex-end;
-  width: 42%;
-  height: 62%;
-}
-
-.portfolio-cover-steps span {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-.portfolio-cover-steps span:nth-child(1) {
-  height: 42%;
-  background: color-mix(in srgb, var(--color-cinza-claro) 22%, var(--color-azul-card));
-}
-
-.portfolio-cover-steps span:nth-child(2) {
-  height: 58%;
-  background: color-mix(in srgb, var(--color-cinza-claro) 38%, var(--color-azul-profundo));
-}
-
-.portfolio-cover-steps span:nth-child(3) {
-  height: 76%;
-  background: color-mix(in srgb, var(--color-cinza-claro) 52%, var(--color-azul-card));
-}
-
-.portfolio-cover-steps span:nth-child(4) {
+.portfolio-cover img {
+  width: 100%;
   height: 100%;
-  background: color-mix(in srgb, var(--color-cinza-claro) 68%, var(--color-azul-profundo));
-}
-
-.portfolio-cover--graphite .portfolio-cover-steps span:nth-child(1) {
-  background: color-mix(in srgb, var(--color-cinza-claro) 18%, var(--color-cinza-escuro));
-}
-
-.portfolio-cover--graphite .portfolio-cover-steps span:nth-child(2) {
-  background: color-mix(in srgb, var(--color-cinza-claro) 32%, var(--color-cinza-escuro));
-}
-
-.portfolio-cover--graphite .portfolio-cover-steps span:nth-child(3) {
-  background: color-mix(in srgb, var(--color-cinza-claro) 48%, var(--color-cinza-escuro));
-}
-
-.portfolio-cover--graphite .portfolio-cover-steps span:nth-child(4) {
-  background: color-mix(in srgb, var(--color-cinza-claro) 64%, var(--color-cinza-escuro));
-}
-
-.portfolio-cover--accent .portfolio-cover-steps span:nth-child(4) {
-  background: var(--color-acao);
+  object-fit: cover;
 }
 
 .portfolio-body {
@@ -241,7 +140,6 @@
 }
 
 .portfolio-name {
-  min-height: calc(1.2em * 2);
   margin-top: var(--space-16);
   color: var(--color-texto-forte);
   font-family: var(--font-family);
@@ -250,14 +148,18 @@
   line-height: 1.2;
 }
 
+.portfolio-card--feature .portfolio-name {
+  font-size: 1.5rem;
+}
+
 .portfolio-summary {
   margin-top: auto;
   padding-top: var(--space-16);
-  color: var(--color-acao);
+  color: var(--color-texto);
   font-family: var(--font-family);
   font-size: 0.875rem;
   font-weight: var(--font-weight-regular);
-  line-height: calc(20 / 14);
+  line-height: calc(22 / 14);
 }
 
 @media (max-width: 1200px) {
@@ -271,15 +173,20 @@
     padding-block: var(--space-60);
   }
 
-  .portfolio-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .portfolio-top,
+  .portfolio-rest {
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-24);
-    margin-top: var(--space-60);
+  }
+
+  .portfolio-top > li:first-child {
+    grid-column: 1 / -1;
   }
 }
 
-@media (max-width: 640px) {
-  .portfolio-grid {
+@media (max-width: 768px) {
+  .portfolio-top,
+  .portfolio-rest {
     grid-template-columns: 1fr;
   }
 }

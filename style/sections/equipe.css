@@ -1,0 +1,120 @@
+/*
+  Equipe.
+  Frame secao-equipe: retrato de 104 px. As fotos ainda não
+  puderam ser exportadas; o círculo reserva o lugar.
+*/
+
+.equipe {
+  padding: calc(var(--space-80) + var(--space-16)) var(--layout-margin) var(--space-80);
+  color: var(--color-texto);
+  background: var(--color-fundo);
+}
+
+.equipe-inner {
+  width: min(100%, var(--layout-content));
+  margin-inline: auto;
+}
+
+.equipe-kicker {
+  color: var(--color-acao);
+  font-size: 0.75rem;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.equipe-title {
+  max-width: 16em;
+  margin-top: var(--space-6);
+  color: var(--color-texto-forte);
+  font-size: clamp(1.75rem, 0.9rem + 2.1vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.equipe-lead {
+  max-width: 46rem;
+  margin-top: var(--space-16);
+  color: var(--color-texto);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: calc(26 / 16);
+}
+
+.equipe-list {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: var(--space-16);
+  margin-top: var(--space-60);
+}
+
+.equipe-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.equipe-photo {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  background: var(--color-fundo-suave);
+  border: var(--border-width) solid var(--color-linha);
+}
+
+.equipe-person--orientador .equipe-photo {
+  border: var(--size-barra) solid var(--color-azul-profundo);
+}
+
+.equipe-name {
+  margin-top: var(--space-16);
+  color: var(--color-texto-forte);
+  font-family: var(--font-family);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.25;
+}
+
+.equipe-role {
+  margin-top: var(--space-6);
+  color: var(--color-texto-apoio);
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-regular);
+  line-height: calc(16 / 12);
+}
+
+@media (max-width: 1200px) {
+  .equipe {
+    padding-inline: var(--space-24);
+  }
+
+  .equipe-list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    row-gap: var(--space-30);
+  }
+}
+
+@media (max-width: 768px) {
+  .equipe {
+    padding-block: var(--space-60);
+  }
+
+  .equipe-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: var(--space-30);
+  }
+}
+
+@media (max-width: 430px) {
+  .equipe-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 360px) {
+  .equipe {
+    padding-inline: var(--space-16);
+  }
+}
