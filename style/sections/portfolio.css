@@ -5,7 +5,8 @@
 */
 
 .portfolio {
-  padding: calc(var(--space-80) + var(--space-16)) var(--layout-margin) calc(var(--space-80) + var(--space-16));
+  padding: calc(var(--space-80) + var(--space-16)) var(--layout-margin)
+    calc(var(--space-80) + var(--space-16));
   color: var(--color-texto);
   background: var(--color-fundo-suave);
 }
@@ -58,17 +59,20 @@
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--color-branco);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.portfolio-card--feature {
+.portfolio-card:hover {
   border: var(--border-width-contorno) solid var(--color-acao);
 }
 
 @media (hover: hover) {
   .portfolio-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 24px color-mix(in srgb, var(--color-azul-profundo) 12%, transparent);
+    box-shadow: 0 10px 24px
+      color-mix(in srgb, var(--color-azul-profundo) 12%, transparent);
   }
 }
 
