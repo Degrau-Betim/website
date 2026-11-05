@@ -1,7 +1,6 @@
 /*
   Equipe.
-  Frame secao-equipe: retrato de 104 px. As fotos ainda não
-  puderam ser exportadas; o círculo reserva o lugar.
+  Frame secao-equipe: retrato de 104 px, recortado em círculo.
 */
 
 .equipe {
@@ -24,17 +23,15 @@
 }
 
 .equipe-title {
-  max-width: 16em;
   margin-top: var(--space-6);
   color: var(--color-texto-forte);
   font-size: clamp(1.75rem, 0.9rem + 2.1vw, 2.5rem);
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .equipe-lead {
-  max-width: 46rem;
   margin-top: var(--space-16);
-  color: var(--color-texto);
+  color: var(--color-texto-apoio);
   font-family: var(--font-family);
   font-size: 1rem;
   line-height: calc(26 / 16);
@@ -43,8 +40,8 @@
 .equipe-list {
   display: grid;
   grid-template-columns: repeat(9, minmax(0, 1fr));
-  gap: var(--space-16);
-  margin-top: var(--space-60);
+  gap: var(--space-16) var(--space-6);
+  margin-top: calc(var(--space-24) + var(--space-16));
 }
 
 .equipe-person {
@@ -59,12 +56,17 @@
   width: 6.5rem;
   height: 6.5rem;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
   background: var(--color-fundo-suave);
-  border: var(--border-width) solid var(--color-linha);
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color 0.2s ease;
 }
 
-.equipe-person--orientador .equipe-photo {
-  border: var(--size-barra) solid var(--color-azul-profundo);
+.equipe-person:hover .equipe-photo,
+.equipe-person:focus-visible .equipe-photo {
+  outline-color: var(--color-acao);
 }
 
 .equipe-name {
@@ -77,8 +79,8 @@
 }
 
 .equipe-role {
-  margin-top: var(--space-6);
-  color: var(--color-texto-apoio);
+  margin-top: var(--space-4);
+  color: var(--color-acao);
   font-family: var(--font-family);
   font-size: 0.75rem;
   font-weight: var(--font-weight-regular);
