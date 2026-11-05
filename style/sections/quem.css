@@ -1,0 +1,105 @@
+/*
+  Quem atendemos.
+  Frame secao-quem-atendemos: cartão 300 × 170, vão de 20 px.
+*/
+
+.quem {
+  padding: calc(var(--space-80) + var(--space-16)) var(--layout-margin) var(--space-80);
+  color: var(--color-texto-invertido);
+  background: var(--color-fundo-invertido);
+}
+
+.quem-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--space-60);
+  align-items: start;
+  width: min(100%, var(--layout-content));
+  margin-inline: auto;
+}
+
+.quem-kicker {
+  color: var(--color-acao);
+  font-size: 0.75rem;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.quem-title {
+  max-width: 10em;
+  margin-top: var(--space-6);
+  color: var(--color-texto-invertido);
+  font-size: clamp(1.75rem, 0.9rem + 2.1vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.quem-text {
+  max-width: 32rem;
+  margin-top: var(--space-30);
+  color: var(--color-texto-sobre-azul);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  line-height: calc(26 / 16);
+}
+
+.quem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-20);
+}
+
+.quem-card {
+  min-height: 10.625rem;
+  padding: var(--space-24);
+  border-left: var(--size-barra) solid var(--color-acao);
+  border-radius: var(--radius);
+  background: var(--color-fundo-card-invertido);
+}
+
+.quem-name {
+  color: var(--color-texto-invertido);
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+.quem-detail {
+  margin-top: var(--space-16);
+  color: var(--color-texto-sobre-azul);
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
+  line-height: calc(20 / 14);
+}
+
+@media (max-width: 1200px) {
+  .quem {
+    padding-inline: var(--space-24);
+  }
+}
+
+@media (max-width: 965px) {
+  .quem {
+    padding-block: var(--space-60);
+  }
+
+  .quem-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-30);
+  }
+}
+
+@media (max-width: 640px) {
+  .quem-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .quem {
+    padding-inline: var(--space-16);
+  }
+}
