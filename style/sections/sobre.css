@@ -4,6 +4,13 @@
   Os fundos dos ODS são a exceção já nomeada na paleta.
 */
 
+.sobre-ods-icon {
+  width: 100%;
+  max-width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
 .sobre {
   padding: calc(var(--space-80) + var(--space-24) + var(--space-4)) var(--layout-margin) var(--space-120);
   color: var(--color-texto);
