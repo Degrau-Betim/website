@@ -4,6 +4,16 @@
   A grade usa branco a 4% — opacidade lida no traço do Figma.
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .hero {
   color: var(--color-texto-invertido);
   background: var(--color-fundo-invertido);
