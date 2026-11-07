@@ -1,0 +1,70 @@
+{
+  "projetos": [
+    {
+      "titulo": "Semear Betim",
+      "categoria": "Social",
+      "periodo": "2026/02",
+      "data": "2026-02",
+      "resumo": "Projeto de reforço escolar e tecnologia para crianças de 7 a 13 anos, alinhado ao ODS 4 (Educação de Qualidade). Ação em andamento no semestre 2026/02.",
+      "imagem": "/website/assets/portfolio/semear-betim.png",
+      "alt": "Sala de aula do projeto Semear Betim, com mesas, computadores e uma professora.",
+      "ordem": 1,
+      "visivel": true
+    },
+    {
+      "titulo": "Pavilhão Social G10 Favelas",
+      "categoria": "Social",
+      "periodo": "2021",
+      "data": "2021",
+      "resumo": "Reforma de 696 m² em Jardim Teresópolis, com sala multiuso, sala de costura, rampa de acesso e fachadas para grafite.",
+      "imagem": "/website/assets/portfolio/pavilhao-g10.png",
+      "alt": "Fachada do Pavilhão Social G10 Favelas, com mural colorido e uma pessoa de bicicleta.",
+      "ordem": 2,
+      "visivel": true
+    },
+    {
+      "titulo": "MRV Decora",
+      "categoria": "Social",
+      "periodo": "2018",
+      "data": "2018",
+      "resumo": "Projeto de decoração de interiores que levou mais qualidade de vida aos moradores do empreendimento Parque Irajá.",
+      "imagem": "/website/assets/portfolio/mrv-decora.png",
+      "alt": "Sala de estar do projeto MRV Decora, com sofá, quadros e cozinha ao fundo.",
+      "ordem": 3,
+      "visivel": true
+    },
+    {
+      "titulo": "Assessoria Técnica (ATHIS)",
+      "categoria": "Social",
+      "periodo": "2021",
+      "data": "2021",
+      "resumo": "Assessoria gratuita em projetos de arquitetura e interiores para quem não tem condições de arcar com o serviço.",
+      "imagem": "/website/assets/portfolio/athis.png",
+      "alt": "Ambiente interno de um projeto de assessoria técnica, com estante, poltrona e mesa.",
+      "ordem": 4,
+      "visivel": true
+    },
+    {
+      "titulo": "Loja Economia Solidária Partage",
+      "categoria": "Social",
+      "periodo": "2018",
+      "data": "2018",
+      "resumo": "Loja do Fórum Municipal de Economia Solidária no Partage Shopping, feita com pallets doados e hoje referência no país.",
+      "imagem": "/website/assets/portfolio/loja-partage.png",
+      "alt": "Vitrine da Loja Economia Solidária no Partage Shopping, com produtos e pallets.",
+      "ordem": 5,
+      "visivel": true
+    },
+    {
+      "titulo": "Matinha do Ingá",
+      "categoria": "Social",
+      "periodo": "2019–2020",
+      "data": "2019",
+      "resumo": "Requalificação de um parque de 0,58 ha, com pista de caminhada, horta comunitária e integração ao Circo de Todo Mundo.",
+      "imagem": "/website/assets/portfolio/matinha-inga.png",
+      "alt": "Caminho e áreas verdes do parque Matinha do Ingá.",
+      "ordem": 6,
+      "visivel": true
+    }
+  ]
+}

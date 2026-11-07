@@ -1,0 +1,47 @@
+# DEGRAU: GitHub Pages em https://degrau-betim.github.io/website/
+# SUBSTITUA a URL abaixo pela URL REAL retornada pelo seu deploy no Cloudflare.
+backend:
+  name: github
+  repo: Degrau-Betim/website
+  branch: main
+  base_url: https://SUBSTITUA-PELO-SEU-WORKER.workers.dev
+  auth_endpoint: /auth
+  site_domain: degrau-betim.github.io
+
+site_url: https://degrau-betim.github.io/website/
+display_url: https://degrau-betim.github.io/website/
+
+# Opcional: testes locais com npx decap-server.
+local_backend: true
+
+# Modo de revisão: rascunho -> PR -> publicação após aprovação.
+publish_mode: editorial_workflow
+
+media_folder: assets/portfolio/uploads
+# URL pública possui /website porque o repositório é um projeto GitHub Pages.
+# Se passarem a usar um domínio próprio como raiz, altere para /assets/portfolio/uploads.
+public_folder: /website/assets/portfolio/uploads
+
+collections:
+  - name: conteudo
+    label: Conteúdo da landing page
+    format: json
+    files:
+      - name: portfolio
+        label: Portfólio de projetos
+        file: data/projetos.json
+        fields:
+          - name: projetos
+            label: Projetos cadastrados
+            widget: list
+            summary: '{{fields.titulo}}'
+            fields:
+              - { label: Título, name: titulo, widget: string }
+              - { label: Categoria, name: categoria, widget: string, default: Social }
+              - { label: Período exibido, name: periodo, widget: string, hint: 'Ex.: 2026/02 ou 2019–2020' }
+              - { label: Data HTML, name: data, widget: string, required: false, hint: 'Ex.: 2026-02, 2021 ou 2019; usado pelo atributo datetime' }
+              - { label: Resumo, name: resumo, widget: text }
+              - { label: Foto, name: imagem, widget: image }
+              - { label: Texto alternativo da foto, name: alt, widget: string }
+              - { label: Ordem de exibição, name: ordem, widget: number, value_type: int, min: 1, default: 99 }
+              - { label: Visível no site, name: visivel, widget: boolean, default: true }
