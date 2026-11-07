@@ -4,7 +4,7 @@ backend:
   name: github
   repo: Degrau-Betim/website
   branch: main
-  base_url: https://degraubetim.workers.dev
+  base_url: https://degrau-decap-oauth.degraubetim.workers.dev
   auth_endpoint: /auth
   site_domain: degrau-betim.github.io
 
