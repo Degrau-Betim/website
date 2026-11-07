@@ -4,6 +4,7 @@
 @import url("./components/buttons.css");
 @import url("./guide/guide.css");
 @import url("./guide/responsive.css");
+@import url("./sections/header.css");
 @import url("./sections/hero.css");
 @import url("./sections/sobre.css");
 @import url("./sections/proposito.css");
