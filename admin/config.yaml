@@ -1,0 +1,68 @@
+
+# Autenticação pelo GitHub
+backend:
+  name: github
+  repo: Degrau-Betim/website
+  branch: main
+
+  # Substitua pela URL do Worker
+  # configurado na etapa 7.
+  base_url: https://SEU-WORKER.workers.dev
+  auth_endpoint: /auth
+
+# Permite desenvolvimento local
+local_backend: true
+
+# Idioma da interface
+locale: pt
+
+# Arquivos enviados pelo CMS
+media_folder: "assets/uploads"
+public_folder: "/website/assets/uploads"
+
+# Conteúdo editável
+collections:
+  - name: "paginas"
+    label: "Páginas"
+
+    files:
+      - name: "inicio"
+        label: "Página inicial"
+        file: "content/home.json"
+        format: "json"
+
+        editor:
+          preview: false
+
+        fields:
+          - label: "Título principal"
+            name: "titulo_capa"
+            widget: "text"
+
+          - label: "Descrição principal"
+            name: "descricao_capa"
+            widget: "text"
+
+          - label: "Título: Sobre"
+            name: "sobre_titulo"
+            widget: "string"
+
+          - label: "Sobre: primeiro parágrafo"
+            name: "sobre_paragrafo_1"
+            widget: "text"
+
+          - label: "Sobre: segundo parágrafo"
+            name: "sobre_paragrafo_2"
+            widget: "text"
+
+          - label: "Título: Nosso propósito"
+            name: "proposito_titulo"
+            widget: "string"
+
+          - label: "Texto: Nosso propósito"
+            name: "proposito_texto"
+            widget: "text"
+
+          - label: "Título: Contato"
+            name: "contato_titulo"
+            widget: "string"
