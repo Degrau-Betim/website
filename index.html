@@ -402,7 +402,11 @@
             </div>
           </dl>
         </div>
-        <form id="contato-form" class="contato-form" novalidate>
+        <form id="contato-form" class="contato-form" action="https://formsubmit.co/sistemadegraubetim@gmail.com" method="POST" novalidate>
+          <p class="contato-honey" aria-hidden="true">
+            <label for="contato-honey">Não preencha este campo</label>
+            <input id="contato-honey" name="_honey" type="text" tabindex="-1" autocomplete="off">
+          </p>
           <div class="contato-field">
             <label for="contato-nome">Nome</label>
             <input class="field" id="contato-nome" name="nome" type="text" autocomplete="name" aria-describedby="contato-nome-erro">
@@ -419,6 +423,7 @@
             <p class="contato-error" id="contato-mensagem-erro" hidden></p>
           </div>
           <button class="btn btn-primary contato-submit" type="submit">Enviar mensagem</button>
+          <p class="contato-status" id="contato-status" role="status" aria-live="polite" hidden></p>
         </form>
       </div>
     </section>

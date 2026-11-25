@@ -1,4 +1,9 @@
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const destino = "sistemadegraubetim@gmail.com";
+
+function fieldsOf(form) {
+  return [...form.querySelectorAll("input, textarea")].filter((field) => field.name !== "_honey");
+}
 
 function messageFor(field) {
   const value = field.value.trim();
@@ -27,13 +32,48 @@ function readForm(form) {
   };
 }
 
+function setStatus(form, text, state) {
+  const status = form.querySelector("#contato-status");
+  if (!status) return;
+  status.textContent = text;
+  status.hidden = !text;
+  if (state) status.dataset.state = state;
+  else delete status.dataset.state;
+}
+
+function sendMessage(form, data) {
+  const extras = {
+    _subject: "Nova mensagem pelo site DEGRAU",
+    _replyto: data.email,
+    _template: "table",
+    _captcha: "false"
+  };
+
+  Object.entries(extras).forEach(([name, value]) => {
+    let input = form.querySelector(`input[name="${name}"]`);
+    if (!input) {
+      input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      form.appendChild(input);
+    }
+    input.value = value;
+  });
+
+  form.submit();
+}
+
 export function initContato(root = document) {
   const form = root.querySelector("#contato-form");
   if (!form) return;
 
+  form.action = `https://formsubmit.co/${destino}`;
+
+  const submit = form.querySelector("[type='submit']");
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const fields = [...form.querySelectorAll("input, textarea")];
+    const fields = fieldsOf(form);
     let valid = true;
 
     fields.forEach((field) => {
@@ -43,13 +83,23 @@ export function initContato(root = document) {
     });
 
     if (!valid) {
+      setStatus(form, "", "");
       const firstInvalid = fields.find((field) => field.getAttribute("aria-invalid") === "true");
       firstInvalid?.focus();
       return;
     }
 
-    // Integração futura: enviar readForm(form) ao serviço definido pela equipe.
-    readForm(form);
+    if (form._honey?.value.trim()) {
+      form.reset();
+      setStatus(form, "Mensagem enviada. Entraremos em contato em breve.", "success");
+      return;
+    }
+
+    if (submit) {
+      submit.disabled = true;
+      submit.textContent = "Enviando…";
+    }
+    sendMessage(form, readForm(form));
   });
 
   form.addEventListener("input", (event) => {
